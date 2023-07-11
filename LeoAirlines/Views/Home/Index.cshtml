@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<html>
+<head>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/responsiveslides.min.js"></script>
+    <a href="~/fonts/glyphicons-halflings-regular.eot"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.ttf"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff2"></a>
+</head>
+<body>
+   
+            <div class="header_bottom">
+
+                <script src="js/jquery.min.js"></script>
+                <script src="js/responsiveslides.min.js"></script>
+                <script>// You can also use "$(window).load(function() {"
+    $(function () {
+      // Slideshow 1
+      $("#slider1").responsiveSlides({
+         auto: true,
+		 nav: true,
+		 speed: 500,
+		 namespace: "callbacks",
+      });
+    });</script>
+                <div class="slider">
+                    <ul class="rslides" id="slider1">
+                        <li><img src="~/images/1.png" alt=""></li>
+                        <li><img src="~/images/2.png" alt=""></li>
+                        <li><img src="~/images/3.png" alt=""></li>
+                        <li><img src="~/images/4.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        
+      
+        
+   
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Services";
+}
+
+<html>
+<head>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/responsiveslides.min.js"></script>
+    <a href="~/fonts/glyphicons-halflings-regular.eot"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.ttf"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff2"></a>
+</head>
+<body class="servbg">
+    
+
+
+    <div class="header_bottom">
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/responsiveslides.min.js"></script>
+        <script>
+            // You can also use "$(window).load(function() {"
+            $(function () {
+                // Slideshow 1
+                $("#slider1").responsiveSlides({
+                    auto: true,
+                    nav: true,
+                    speed: 500,
+                    namespace: "callbacks",
+                });
+            });</script>
+
+    </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="~/images/city.png" style="height:auto" ; width="100" alt="" />
+            <div class="card-content">
+                <h2>AIRPORT FINDER</h2>
+                <p>Here, You can find the airports between Two Cities.</p>
+                <div class="read_more"> <h3><a href="~/airportinfoes/Create">EXPLORE</a></h3> </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card-container">
+        <div class="card">
+            <img src="~/images/state.png" style="height:auto" ; width="100" alt="" />
+            <div class="card-content">
+                <h2>STATEWISE AIRPORTS</h2>
+                <p>Here, You can find the airports list inside the states of India</p>
+                <div class="read_more"> <h3><a href="~/airportinfoes/StateWiseAirports"> EXPLORE</a></h3> </div>
+
+
+            </div>
+        </div>
+    </div>
+    @*<div class="about_data">
+                <div class="about_desc">
+                    <h1 style="font-family:'Copperplate Gothic'; font-size:30px"><b>Our Services</b></h1>
+
+                    <div class="service1" style="width:18rem ; float:left">
+                        <img src="~/images/city.png" style="height:100px" ; width="100" alt="" />
+                        <div class="card1">
+                            <h1 style="font-family:'Gill Sans MT'; font-size:20px" class="card-title1">AIRPORT FINDER</h1>
+                            <p class="card-text1">Here, You can find the airports between Two Cities.</p>
+                            <div class="read_more"> <h3><a href="#">EXPLORE</a></h3> </div>
+                        </div>
+                        <div class="serv_desc">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+
+
+                    <div class="service2" style="width:18rem; float:right">
+                        <img src="~/images/state.png" style="height:100px" ; width="100" alt="" />
+                        <div class="card1">
+                            <h1  style="font-family:'Gill Sans MT'; font-size:20px"class="card-title1">STATEWISE AIRPORTS</h1>
+                            <p class="card-text1">Here, You can find the airports list inside the states of India</p>
+                            <div class="read_more"> <h3><a href="#">EXPLORE</a></h3> </div>
+                        </div>
+                        <div class="serv_desc">
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>*@
+
+
+</body>
+</html>

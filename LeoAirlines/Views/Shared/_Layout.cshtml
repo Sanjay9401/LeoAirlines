@@ -1,0 +1,65 @@
+﻿
+
+<html>
+<head>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/responsiveslides.min.js"></script>
+    <a href="~/fonts/glyphicons-halflings-regular.eot"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.ttf"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff2"></a>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header_top">
+            <div class="logo">
+                <a href="index.html">
+                    <h1>MPHASIS</h1>
+                    <h2>AIRLINES</h2>
+                </a>
+            </div>
+            <div class="menu" style="font-weight:bold">
+                <ul>
+                    <li><a href="../Home/Index"><em>HOME</em></a></li>
+                    <li><a href="../Home/About"><em>ABOUT US</em></a></li>
+                    <li><a href="../Home/Services"><em>SERVICES</em></a></li>
+                    <li><a href="../Home/Contact"><em>CONTACT</em></a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+    <div class="footer">
+
+    <div class="copy_right">
+        <p style="color:#A9A9A9; font-size:17px"> <b>© 2023 Mphasis Airlines. All Rights Reserved.</b></p>
+
+    </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿@model IEnumerable<LeoAirlines.Models.State>
+@{
+    ViewBag.Title = "StateWiseAirports";
+}
+
+
+
+<html>
+
+<head>
+
+    <link href="~/Content/StateWiseAirports.css" rel="stylesheet" />
+
+</head>
+
+<body class="servbg">
+
+
+
+
+
+    <div class="statewise">
+
+        <h2><b>Find a State</b></h2>
+
+        <h4 style="color:brown;text-align:center">Time to get Travel in the World </h4>
+
+    </div>
+
+    <div>
+
+        <h2></h2>
+
+    </div>
+
+
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+            @using (Html.BeginForm("StateWiseAirports", "airportinfoes", FormMethod.Post))
+
+            {
+
+                <div class="form-horizontal">
+
+                    <div class="col-md-4">
+
+                        <label></label>
+
+                    </div>
+
+
+                    <div class="swsearch">
+
+                        <input type="text" name="state" class="form-control" placeholder="Find State" />
+
+
+
+                        <div class="col-md-2">
+
+                            <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span> Search</button>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4"></div>
+
+
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="container-fluid" style="margin-top:10px;">
+
+        <div class="row">
+
+
+
+            @foreach (var m in Model)
+
+            {
+
+                <div class="col-sm-4">
+
+                    <div class="card-state">
+
+                        <div class="card-body">
+
+
+                            <a href="~/Controllers/airportinfoesController.cs" style="color:black; font-family:'Gill Sans MT'"><b><h6 class="card-title">@m.Sname.ToUpper()</h6></b> </a>
+
+                            <div style="color:red">
+                                <span id="actlink">@Html.ActionLink("View Airports", "AirportList", new { @id = m.Sname })</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            }
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+
+</body>
+
+</html>
+
+

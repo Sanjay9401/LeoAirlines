@@ -1,0 +1,134 @@
+﻿@model LeoAirlines.Models.cityinfo
+@using System.Web.UI.WebControls
+
+
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+<link href="~/Content/bootstrap-chosen.css" rel="stylesheet" />
+<script src="~/Scripts/chosen.jquery.js"></script>
+<script src="~/Scripts/chosen.jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+
+<style>
+    body {
+        background-image: url('../../images/front photo.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+
+
+
+<center>
+
+
+
+    @using (Html.BeginForm())
+    {
+
+
+
+        @Html.AntiForgeryToken()
+
+
+
+
+        <div class="form-" style="margin-left:50% ">
+
+
+
+            <h1 style="color:darkblue; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size:50px"><b>GO! FLY! EXPLORE!</b></h1>
+
+
+
+            <br />
+
+
+
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+
+            <div class="form-group">
+                <h3 style="color:darkblue; font-size:30px; font-family:Cambria"><b>Source</b></h3>
+
+
+
+                <div class="row-fluid col-md-10">
+
+
+
+                    @Html.DropDownList("CityList1", ViewBag.CityList1 as SelectList, "Enter Source City", new
+                    {
+                        @class = "form-control",
+                        @required = "true",
+                        
+                    })
+
+                    @Html.ValidationMessageFor(model => model.CITY, "", new { @class = "text-danger" })
+                </div>
+
+
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                @*@Html.LabelFor(model => model.CITY, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                <h3 style="color: darkblue; font-size: 30px; font-family: Cambria "><b>Destination</b></h3>
+                <div class="col-md-10 row-fluid" position="right">
+                    @Html.DropDownList("CityList2", ViewBag.CityList2 as SelectList, "Enter Destination City", new { @class = "form-control", @required = "true", @id = "normaldropdown" })
+                    @Html.ValidationMessageFor(model => model.CITY, "", new { @class = "text-danger" })
+                    <h6 style="color:red">@TempData["Error"]</h6>
+
+
+
+                </div>
+            </div>
+
+
+
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Search" class="btn btn-primary " style="padding: 7px 15px; font-size:15px" />
+                </div>
+            </div>
+
+
+
+
+        </div>
+    }
+</center>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        $(function () {
+            $("#normaldropdown").choosen();
+        })
+    </script>
+}

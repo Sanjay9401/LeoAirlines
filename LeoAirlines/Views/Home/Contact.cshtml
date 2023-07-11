@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<html>
+<head>
+    <link href="~/css/style.css" rel="stylesheet" />
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/responsiveslides.min.js"></script>
+    <a href="~/fonts/glyphicons-halflings-regular.eot"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.ttf"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff"></a>
+    <a href="~/fonts/glyphicons-halflings-regular.woff2"></a>
+</head>
+<body style="background: linear-gradient(45deg,#bdc3c7, #2c3e50)">
+    
+
+
+    <div class="header_bottom">
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/responsiveslides.min.js"></script>
+        <script>
+            // You can also use "$(window).load(function() {"
+            $(function () {
+                // Slideshow 1
+                $("#slider1").responsiveSlides({
+                    auto: true,
+                    nav: true,
+                    speed: 500,
+                    namespace: "callbacks",
+                });
+            });</script>
+
+    </div>
+    </div>
+    @*<img src="~/images/air.png.jpg" style="height:250px; width:350px" />*@
+    <div class="about_data">
+        <div class="about_desc">
+            <h2 style="font-family:'Copperplate Gothic'; font-size:30px">Get In Touch</h2>
+            <div class="feedback">
+                <div class="feed">
+                    <form>
+                        <label>NAME</label>
+                        <input type="text" value="">
+                        <label>E-MAIL</label>
+                        <input type="text" value="">
+                        <label>SUBJECT</label>
+                        <textarea></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="company_address">
+                    <h2><b>Company Information :</b></h2>
+                    <div class="address_desc">
+                        <p>Block 8, DLF IT Park,</p>
+                        <p>Chennai,</p>
+                        <p>INDIA</p>
+                    </div>
+                    <div class="address_data">
+                        <p>Phone:00000000000<p>
+                        <p>Fax:00000000000<p>
+                        <p>Email: airinfo@mphasis.com<p>
+
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+
+
+
+</body>
+</html>
+
+
